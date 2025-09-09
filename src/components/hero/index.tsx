@@ -18,8 +18,10 @@ export default function Hero() {
             Transformamos Ideas en Experiencias Digitales
           </Heading>
           <Paragraph>
-            Creamos sitios web modernos, aplicaciones innovadoras y soluciones
-            digitales que impulsan tu negocio hacia el futuro.
+            Somos una agencia nueva con ideas frescas. Creamos sitios web
+            modernos y aplicaciones que reflejan la esencia de tu marca a
+            precios competitivos. Nuestra agencia es nueva, nuestros expertos
+            no.
           </Paragraph>
           <div className="flex gap-4 justify-center flex-wrap">
             <Button className="btn-primary">Comenzar Proyecto</Button>

@@ -11,11 +11,11 @@ export default function Contact() {
       <div className="container mx-auto my-0">
         <div className="max-width-[700px] my-0 mx-auto text-center">
           <Heading as="h2" variant="h2" className="h2">
-            ¿Listo para comenzar?
+            ¿Tienes una idea?
           </Heading>
           <Paragraph>
-            Cuéntanos sobre tu proyecto y te ayudaremos a convertir tu visión en
-            realidad digital.
+            Hablemos. Como agencia nueva, ofrecemos precios competitivos y
+            atención personalizada para hacer realidad tu proyecto digital.
           </Paragraph>
 
           <form className="grid gap-8 mt-12">

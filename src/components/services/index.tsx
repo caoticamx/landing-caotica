@@ -48,8 +48,8 @@ export default function Services() {
               Optimización
             </Heading>
             <Paragraph>
-              Mejoramos la velocidad, SEO y rendimiento de tu sitio para
-              maximizar su efectividad.
+              Optimizamos la velocidad, SEO y rendimiento de tu sitio para
+              mejorar su visibilidad y efectividad online.
             </Paragraph>
           </div>
           <div className="service-card">
@@ -59,7 +59,7 @@ export default function Services() {
             </Heading>
             <Paragraph>
               Soporte técnico continuo, actualizaciones y monitoreo para
-              mantener tu proyecto funcionando perfectamente.
+              mantener tu proyecto funcionando sin problemas.
             </Paragraph>
           </div>
           <div className="service-card">
@@ -68,8 +68,8 @@ export default function Services() {
               Consultoría Digital
             </Heading>
             <Paragraph>
-              Estrategias digitales personalizadas para hacer crecer tu negocio
-              en el mundo online.
+              Estrategias digitales personalizadas y asesoramiento para hacer
+              crecer tu presencia online de manera efectiva.
             </Paragraph>
           </div>
         </div>

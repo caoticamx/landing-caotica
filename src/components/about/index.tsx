@@ -21,26 +21,27 @@ export default function About() {
               nuestros clientes.
             </Paragraph>
             <Paragraph>
-              Nuestro enfoque centrado en el usuario y nuestra metodología ágil
-              nos permite crear productos digitales que realmente funcionan.
+              Nuestro enfoque centrado en la calidad y metodología ágil nos
+              permite crear productos digitales que realmente funcionan, sin
+              importar el tamaño de tu proyecto.
             </Paragraph>
           </div>
           <div className="grid grid-cols-2 gap-4 opacity-90">
             <div className="stat">
-              <div className="stat-number">150+</div>
+              <div className="stat-number">+50</div>
               <div>Proyectos Completados</div>
             </div>
             <div className="stat">
-              <div className="stat-number">95%</div>
-              <div>Clientes Satisfechos</div>
+              <div className="stat-number">100%</div>
+              <div>Compromiso con Calidad</div>
             </div>
             <div className="stat">
-              <div className="stat-number">5+</div>
-              <div>Años de Experiencia</div>
+              <div className="stat-number">2022</div>
+              <div>Año de Fundación</div>
             </div>
             <div className="stat">
               <div className="stat-number">24/7</div>
-              <div>Soporte Técnico</div>
+              <div>Atención Personalizada</div>
             </div>
           </div>
         </div>
