@@ -18,7 +18,46 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Docker
+
+This project includes Docker configuration for easy deployment and development.
+
+### Prerequisites
+
+- Docker
+- Docker Compose
+
+### Running with Docker
+
+Build and run the application:
+
+```bash
+# Build and start the container
+docker-compose up --build
+
+# Run in background (detached mode)
+docker-compose up -d
+
+# Stop the container
+docker-compose down
+
+# View logs
+docker-compose logs -f caotica-site
+
+# Rebuild without cache
+docker-compose build --no-cache
+```
+
+The application will be available at [http://localhost:3001](http://localhost:3001).
+
+### Container Details
+
+- **Container name**: `caotica-site`
+- **Port**: 3001 (mapped to container port 3000)
+- **Volumes**: Source code is mounted for live development
+- **Network**: `caotica-network`
+
+[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3001/api/hello](http://localhost:3001/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 

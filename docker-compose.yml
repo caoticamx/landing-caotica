@@ -1,0 +1,26 @@
+version: "3.8"
+
+name: caotica
+
+services:
+  caotica-site:
+    build: .
+    container_name: caotica-site
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./next.config.ts:/app/next.config.ts
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./postcss.config.mjs:/app/postcss.config.mjs
+      - ./eslint.config.mjs:/app/eslint.config.mjs
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - caotica-network
+
+networks:
+  caotica-network:
+    driver: bridge
