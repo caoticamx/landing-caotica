@@ -57,7 +57,7 @@ The application will be available at [http://localhost:3001](http://localhost:30
 - **Volumes**: Source code is mounted for live development
 - **Network**: `caotica-network`
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3001/api/hello](http://localhost:3001/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) are available but currently disabled. The example endpoint at `pages/api/hello.ts` returns a 500 error by default.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
