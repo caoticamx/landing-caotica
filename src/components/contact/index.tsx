@@ -20,8 +20,8 @@ export default function Contact() {
   const [successMessage, setSuccessMessage] = useState<string>("");
 
   // Configuración
-  const WHATSAPP_NUMBER =
-    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "521234567890";
+  const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "";
+  const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
 
   // Validación de formulario
   const validateForm = (): boolean => {
@@ -118,7 +118,7 @@ ${formData.name}`;
         `Consulta desde Caótica - ${formData.name}`
       );
       const body = encodeURIComponent(generateEmailMessage());
-      const mailtoLink = `mailto:emmanuelle.laguna@gmail.com?subject=${subject}&body=${body}&cc=${formData.email}`;
+      const mailtoLink = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}&cc=${formData.email}`;
       window.open(mailtoLink);
       setSuccessMessage(
         "✅ Se abrió tu cliente de email. El mensaje está pre-llenado y se enviará una copia al cliente automáticamente."
