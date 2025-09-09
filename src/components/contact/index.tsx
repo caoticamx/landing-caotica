@@ -17,6 +17,11 @@ export default function Contact() {
 
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState<string>("");
+
+  // Configuración
+  const WHATSAPP_NUMBER =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "521234567890";
 
   // Validación de formulario
   const validateForm = (): boolean => {
@@ -100,7 +105,7 @@ ${formData.name}`;
   };
 
   // Manejo de envío directo
-  const handleDirectSubmit = (method: string) => {
+  const handleDirectSubmit = async (method: string) => {
     if (!validateForm()) {
       return;
     }
@@ -108,16 +113,23 @@ ${formData.name}`;
     setIsSubmitting(true);
 
     if (method === "email") {
+      // Usar mailto con CC para envío directo
       const subject = encodeURIComponent(
         `Consulta desde Caótica - ${formData.name}`
       );
       const body = encodeURIComponent(generateEmailMessage());
-      const mailtoLink = `mailto:contacto@caotica.com?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:emmanuelle.laguna@gmail.com?subject=${subject}&body=${body}&cc=${formData.email}`;
       window.open(mailtoLink);
+      setSuccessMessage(
+        "✅ Se abrió tu cliente de email. El mensaje está pre-llenado y se enviará una copia al cliente automáticamente."
+      );
     } else if (method === "whatsapp") {
       const message = encodeURIComponent(generateWhatsAppMessage());
-      const whatsappLink = `https://wa.me/521234567890?text=${message}`;
+      const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
       window.open(whatsappLink, "_blank");
+      setSuccessMessage(
+        "📱 Se abrió WhatsApp con tu mensaje pre-llenado. ¡Envíalo para contactarnos!"
+      );
     }
 
     // Reset form after a delay
@@ -128,6 +140,7 @@ ${formData.name}`;
         reason: "",
       });
       setIsSubmitting(false);
+      setSuccessMessage(""); // Limpiar mensaje de éxito
     }, 1000);
   };
 
@@ -145,6 +158,15 @@ ${formData.name}`;
             Hablemos. Como agencia nueva, ofrecemos precios competitivos y
             atención personalizada para hacer realidad tu proyecto digital.
           </Paragraph>
+
+          {/* Mensaje de éxito */}
+          {successMessage && (
+            <div className="mt-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg backdrop-blur-md">
+              <p className="text-green-300 text-sm font-medium">
+                {successMessage}
+              </p>
+            </div>
+          )}
 
           <form className="grid gap-8 mt-12">
             <div className="grid sm:grid-cols-2 gap-4">
