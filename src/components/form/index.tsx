@@ -144,91 +144,107 @@ export default function ContactForm() {
   };
   return (
     <>
-      {successMessage && (
-        <div className="mt-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg backdrop-blur-md">
-          <p className="text-green-300 text-sm font-medium">{successMessage}</p>
-        </div>
-      )}
       <form className="grid gap-8 mt-12">
         <div className="grid sm:grid-cols-2 gap-4">
-          <input
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            className="p-4 border border-[rgba(255,255,255,0.2)] rounded-[10px] bg-[rgba(255,255,255,0.05)] textt-white backdrop-blur-md text-base placeholder:text-[rgba(255,255,255,0.6)] focus:outline-0 focus:border focus:border-[#00d4ff]"
-            type="text"
-            placeholder="Nombre"
-            required
-          />
-          <input
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            className="p-4 border border-[rgba(255,255,255,0.2)] rounded-[10px] bg-[rgba(255,255,255,0.05)] textt-white backdrop-blur-md text-base placeholder:text-[rgba(255,255,255,0.6)] focus:outline-0 focus:border focus:border-[#00d4ff]"
-            type="email"
-            placeholder="Correo electrónico"
-            required
-          />
+          <div>
+            <input
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              className="p-4 w-full border border-[rgba(255,255,255,0.2)] rounded-[10px] bg-[rgba(255,255,255,0.05)] textt-white backdrop-blur-md text-base placeholder:text-[rgba(255,255,255,0.6)] focus:outline-0 focus:border focus:border-[#00d4ff]"
+              type="text"
+              placeholder="Nombre"
+              required
+            />
+            {errors.name && (
+              <p className="mt-1 text-left text-xs text-red-400">
+                {errors.name}
+              </p>
+            )}
+          </div>
+          <div>
+            <input
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              className="p-4 w-full  border border-[rgba(255,255,255,0.2)] rounded-[10px] bg-[rgba(255,255,255,0.05)] textt-white backdrop-blur-md text-base placeholder:text-[rgba(255,255,255,0.6)] focus:outline-0 focus:border focus:border-[#00d4ff]"
+              type="email"
+              placeholder="Correo electrónico"
+              required
+            />
+            {errors.email && (
+              <p className="mt-1 text-left text-xs text-red-400">
+                {errors.email}
+              </p>
+            )}
+          </div>
         </div>
         <div className="text-left">
           <Heading as="h4" variant="h4" className="h4">
             ¿Por qué quieres comunicarte con nosotros?
           </Heading>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <label>
-              <input
-                type="radio"
-                name="reason"
-                value="nuevo-proyecto"
-                checked={formData.reason === "nuevo-proyecto"}
-                onChange={() => handleReasonChange("nuevo-proyecto")}
-                className="peer absolute opacity-0 cursor-pointer"
-              />
-              <div className="reason-option">
-                <span className="checkmark w-10 h-10 flex items-center justify-center rounded-full text-xl mr-4 bg-[rgba(255,255,255,0.05)] transition-all duration-300">
-                  🚀
-                </span>
-                <span className="reason-text font-medium ml-2 transition-colors duration-300 ease-in">
-                  Nuevo Proyecto
-                </span>
-              </div>
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="reason"
-                value="cotizacion"
-                checked={formData.reason === "cotizacion"}
-                onChange={() => handleReasonChange("cotizacion")}
-                className="peer absolute opacity-0 cursor-pointer"
-              />
-              <div className="reason-option">
-                <span className="checkmark w-10 h-10 flex items-center justify-center rounded-full text-xl mr-4 bg-[rgba(255,255,255,0.05)] transition-all duration-300">
-                  💰
-                </span>
-                <span className="reason-text font-medium ml-2 transition-colors duration-300 ease-in">
-                  Solicitar Cotización
-                </span>
-              </div>
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="reason"
-                value="consultoria"
-                checked={formData.reason === "consultoria"}
-                onChange={() => handleReasonChange("consultoria")}
-                className="peer absolute opacity-0 cursor-pointer"
-              />
-              <div className="reason-option">
-                <span className="checkmark w-10 h-10 flex items-center justify-center rounded-full text-xl mr-4 bg-[rgba(255,255,255,0.05)] transition-all duration-300">
-                  💡
-                </span>
-                <span className="reason-text font-medium ml-2 transition-colors duration-300 ease-in">
-                  Consultoría Digital
-                </span>
-              </div>
-            </label>
+          <div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <label>
+                <input
+                  type="radio"
+                  name="reason"
+                  value="nuevo-proyecto"
+                  checked={formData.reason === "nuevo-proyecto"}
+                  onChange={() => handleReasonChange("nuevo-proyecto")}
+                  className="peer absolute opacity-0 cursor-pointer"
+                />
+                <div className="reason-option">
+                  <span className="checkmark w-10 h-10 flex items-center justify-center rounded-full text-xl mr-4 bg-[rgba(255,255,255,0.05)] transition-all duration-300">
+                    🚀
+                  </span>
+                  <span className="reason-text font-medium ml-2 transition-colors duration-300 ease-in">
+                    Nuevo Proyecto
+                  </span>
+                </div>
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="reason"
+                  value="cotizacion"
+                  checked={formData.reason === "cotizacion"}
+                  onChange={() => handleReasonChange("cotizacion")}
+                  className="peer absolute opacity-0 cursor-pointer"
+                />
+                <div className="reason-option">
+                  <span className="checkmark w-10 h-10 flex items-center justify-center rounded-full text-xl mr-4 bg-[rgba(255,255,255,0.05)] transition-all duration-300">
+                    💰
+                  </span>
+                  <span className="reason-text font-medium ml-2 transition-colors duration-300 ease-in">
+                    Solicitar Cotización
+                  </span>
+                </div>
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="reason"
+                  value="consultoria"
+                  checked={formData.reason === "consultoria"}
+                  onChange={() => handleReasonChange("consultoria")}
+                  className="peer absolute opacity-0 cursor-pointer"
+                />
+                <div className="reason-option">
+                  <span className="checkmark w-10 h-10 flex items-center justify-center rounded-full text-xl mr-4 bg-[rgba(255,255,255,0.05)] transition-all duration-300">
+                    💡
+                  </span>
+                  <span className="reason-text font-medium ml-2 transition-colors duration-300 ease-in">
+                    Consultoría Digital
+                  </span>
+                </div>
+              </label>
+            </div>
+            {errors.reason && (
+              <p className="mt-1 text-center text-xs text-red-400">
+                {errors.reason}
+              </p>
+            )}
           </div>
         </div>
 
@@ -262,6 +278,11 @@ export default function ContactForm() {
           </div>
         </div>
       </form>
+      {successMessage && (
+        <div className="mt-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg backdrop-blur-md">
+          <p className="text-green-300 text-sm font-medium">{successMessage}</p>
+        </div>
+      )}
     </>
   );
 }
