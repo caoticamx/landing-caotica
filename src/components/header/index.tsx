@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
     <header className="fixed top-0 w-full backdrop-blur-md border-b border-white/10 z-[1000] transition-all duration-300 ease-in-out">
@@ -5,7 +7,7 @@ export default function Header() {
         <div className="text-[1.8rem] font-extrabold text-white">Caótica</div>
         <ul className="list-none gap-6 hidden sm:flex">
           <li>
-            <a
+            <Link
               className="relative text-white no-underline font-medium transition-colors duration-300 ease-in-out hover:text-[#00d4ff]
            after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px]
            after:bg-gradient-to-r after:from-[#00d4ff] after:to-[#9b59b6] after:transition-all after:duration-300 after:ease-in-out
@@ -13,10 +15,10 @@ export default function Header() {
               href="#inicio"
             >
               Inicio
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="relative text-white no-underline font-medium transition-colors duration-300 ease-in-out hover:text-[#00d4ff]
            after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px]
            after:bg-gradient-to-r after:from-[#00d4ff] after:to-[#9b59b6] after:transition-all after:duration-300 after:ease-in-out
@@ -24,10 +26,10 @@ export default function Header() {
               href="#servicios"
             >
               Servicios
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="relative text-white no-underline font-medium transition-colors duration-300 ease-in-out hover:text-[#00d4ff]
            after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px]
            after:bg-gradient-to-r after:from-[#00d4ff] after:to-[#9b59b6] after:transition-all after:duration-300 after:ease-in-out
@@ -35,10 +37,10 @@ export default function Header() {
               href="#nosotros"
             >
               Nosotros
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="relative text-white no-underline font-medium transition-colors duration-300 ease-in-out hover:text-[#00d4ff]
            after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px]
            after:bg-gradient-to-r after:from-[#00d4ff] after:to-[#9b59b6] after:transition-all after:duration-300 after:ease-in-out
@@ -46,7 +48,7 @@ export default function Header() {
               href="#contacto"
             >
               Contacto
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

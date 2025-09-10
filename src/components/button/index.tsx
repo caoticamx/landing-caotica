@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Button({
   children,
   className,
@@ -5,14 +7,14 @@ export default function Button({
 }: {
   children: React.ReactNode;
   className?: string;
-  href?: string;
+  href: string;
 }) {
   return (
-    <a
+    <Link
       href={href}
       className={`px-8 py-4 rounded-4xl text-lg font-semibold cursor-pointer decoration-0 inline-block transition-all duration-300 ease-in-out ${className}`}
     >
       {children}
-    </a>
+    </Link>
   );
 }
