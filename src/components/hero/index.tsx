@@ -22,8 +22,12 @@ export default function Hero() {
             digitales que impulsan tu negocio hacia el futuro.
           </Paragraph>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button className="btn-primary">Comenzar Proyecto</Button>
-            <Button className="btn-secondary">Ver Servicios</Button>
+            <Button href="#contacto" className="btn-primary">
+              Comenzar Proyecto
+            </Button>
+            <Button href="#servicios" className="btn-secondary">
+              Ver Servicios
+            </Button>
           </div>
         </div>
       </div>
