@@ -1,13 +1,18 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
-type Data = {
-  name: string;
+type ErrorResponse = {
+  error: string;
+  message: string;
 };
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>,
+  res: NextApiResponse<ErrorResponse>
 ) {
-  res.status(200).json({ name: "John Doe" });
+  // Endpoint temporalmente deshabilitado
+  res.status(500).json({
+    error: "Internal Server Error",
+    message: "This endpoint is currently disabled",
+  });
 }
