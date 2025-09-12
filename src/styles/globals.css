@@ -52,6 +52,9 @@ html {
   .h4 {
     @apply text-xl mb-6 text-[#00d4ff] font-semibold text-center;
   }
+  .h5 {
+    @apply text-2xl mb-3 text-[#00d4ff] font-semibold text-center;
+  }
   .btn-primary {
     @apply text-white bg-gradient-to-tr from-[#00d4ff] to-[#9b59b6] shadow-[0_10px_30px_rgba(0,212,255,0.3)] hover:translate-y-[-3px] hover:shadow-[0_15px_40px_rgba(0,212,255,0.4)];
   }

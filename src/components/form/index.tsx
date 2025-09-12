@@ -145,41 +145,49 @@ export default function ContactForm() {
   return (
     <>
       <form className="grid gap-8 mt-12">
-        <div className="grid sm:grid-cols-2 gap-4">
-          <div>
-            <input
-              name="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              className="p-4 w-full border border-[rgba(255,255,255,0.2)] rounded-[10px] bg-[rgba(255,255,255,0.05)] textt-white backdrop-blur-md text-base placeholder:text-[rgba(255,255,255,0.6)] focus:outline-0 focus:border focus:border-[#00d4ff]"
-              type="text"
-              placeholder="Nombre"
-              required
-            />
-            {errors.name && (
-              <p className="mt-1 text-left text-xs text-red-400">
-                {errors.name}
-              </p>
-            )}
-          </div>
-          <div>
-            <input
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              className="p-4 w-full  border border-[rgba(255,255,255,0.2)] rounded-[10px] bg-[rgba(255,255,255,0.05)] textt-white backdrop-blur-md text-base placeholder:text-[rgba(255,255,255,0.6)] focus:outline-0 focus:border focus:border-[#00d4ff]"
-              type="email"
-              placeholder="Correo electrónico"
-              required
-            />
-            {errors.email && (
-              <p className="mt-1 text-left text-xs text-red-400">
-                {errors.email}
-              </p>
-            )}
+        <div>
+          <Heading as="h5" variant="h5" className="h5">
+            Paso 1
+          </Heading>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div>
+              <input
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="p-4 w-full border border-[rgba(255,255,255,0.2)] rounded-[10px] bg-[rgba(255,255,255,0.05)] textt-white backdrop-blur-md text-base placeholder:text-[rgba(255,255,255,0.6)] focus:outline-0 focus:border focus:border-[#00d4ff]"
+                type="text"
+                placeholder="Nombre"
+                required
+              />
+              {errors.name && (
+                <p className="mt-1 text-left text-xs text-red-400">
+                  {errors.name}
+                </p>
+              )}
+            </div>
+            <div>
+              <input
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="p-4 w-full  border border-[rgba(255,255,255,0.2)] rounded-[10px] bg-[rgba(255,255,255,0.05)] textt-white backdrop-blur-md text-base placeholder:text-[rgba(255,255,255,0.6)] focus:outline-0 focus:border focus:border-[#00d4ff]"
+                type="email"
+                placeholder="Correo electrónico"
+                required
+              />
+              {errors.email && (
+                <p className="mt-1 text-left text-xs text-red-400">
+                  {errors.email}
+                </p>
+              )}
+            </div>
           </div>
         </div>
         <div className="text-left">
+          <Heading as="h5" variant="h5" className="h5">
+            Paso 2
+          </Heading>
           <Heading as="h4" variant="h4" className="h4">
             ¿Por qué quieres comunicarte con nosotros?
           </Heading>
@@ -249,6 +257,9 @@ export default function ContactForm() {
         </div>
 
         <div className="text-center">
+          <Heading as="h5" variant="h5" className="h5">
+            Paso 3
+          </Heading>
           <h4 className="text-xl mb-6 text-[#00d4ff] font-semibold">
             ¿Cómo prefieres que te contactemos?
           </h4>
