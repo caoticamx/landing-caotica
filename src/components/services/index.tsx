@@ -4,7 +4,7 @@ import Paragraph from "../paragraph";
 export default function Services() {
   return (
     <section
-      className="py-24 bg-[rgba(0,0,0,0.3)] backdrop-blur-md"
+      className="py-24 bg-[rgba(0,0,0,0.3)] backdrop-blur-md px-4 sm:px-0"
       id="servicios"
     >
       <div className="container mx-auto my-0">

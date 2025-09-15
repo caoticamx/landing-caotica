@@ -5,7 +5,7 @@ import Paragraph from "../paragraph";
 export default function Contact() {
   return (
     <section
-      className="contact py-24 backdrop-blur-md bg-[rgba(0,0,0,0.3)]"
+      className="contact py-24 px-4 sm:px-0 backdrop-blur-md bg-[rgba(0,0,0,0.3)]"
       id="contacto"
     >
       <div className="container mx-auto my-0">

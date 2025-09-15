@@ -5,7 +5,7 @@ import Paragraph from "../paragraph";
 export default function Hero() {
   return (
     <section
-      className="min-h-screen flex items-center justify-center text-center pt-18 pb-8"
+      className="min-h-screen flex items-center justify-center text-center pt-18 pb-8 px-4 sm:px-0"
       id="inicio"
     >
       <div className="container mx-auto my-0 px-5 z-10">

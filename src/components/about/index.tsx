@@ -3,7 +3,7 @@ import Paragraph from "../paragraph";
 
 export default function About() {
   return (
-    <section className="py-24" id="nosotros">
+    <section className="py-24 px-4 sm:px-0" id="nosotros">
       <div className="container mx-auto my-0">
         <div className="grid gap-16 items-center grid-cols-1 md:grid-cols-2">
           <div className="about-text">
