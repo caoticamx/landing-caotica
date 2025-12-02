@@ -1,8 +1,6 @@
 import Animation from "@/components/animation";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import About from "@/components/about";
-import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import ItemPortfolio from "@/components/itemPortfolio";
 
@@ -17,8 +15,6 @@ export default function Portafolio() {
           description="Explora nuestra colección de proyectos web innovadores. Cada proyecto es único y está diseñado para superar las expectativas de nuestros clientes."
         />
         <ItemPortfolio />
-        <About />
-        <Contact />
       </main>
       <Footer />
     </div>
