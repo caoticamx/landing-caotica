@@ -65,10 +65,16 @@ html {
     @apply absolute rounded-[50%] opacity-10 bg-[linear-gradient(45deg,#00d4ff,#9b59b6,#e74c3c)] animate-float;
   }
   .service-card {
-    @apply bg-[rgba(255,255,255,0.05)] backdrop-blur-md border border-[rgba(255,255,255,0.1)] rounded-[20px] p-8 text-center transition-all ease-in duration-300 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:w-full before:h-full before:left-[-100px] before:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)] before:transition-[left] before:duration-500 hover:before:left-[100%] hover:border-[#00d4ff] hover:shadow-[0_20px_40px_rgba(0,212,255,0.2)] hover:-translate-y-[10px];
+    @apply bg-[rgba(255,255,255,0.05)] backdrop-blur-md border border-[rgba(255,255,255,0.1)] rounded-[20px] text-center transition-all ease-in duration-300 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:w-full before:h-full before:left-[-100px] before:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)] before:transition-[left] before:duration-500 hover:before:left-[100%] hover:border-[#00d4ff] hover:shadow-[0_20px_40px_rgba(0,212,255,0.2)] hover:-translate-y-[10px];
+  }
+  .service-content {
+    @apply p-8;
   }
   .service-icon {
-    @apply w-20 h-20 mx-auto mb-6 rounded-[20px] flex items-center justify-center font-extrabold text-3xl bg-gradient-to-tr from-[#00d4ff] to-[#9b59b6];
+    @apply w-20 h-20 mx-auto mb-6 rounded-[20px] mt-8 flex items-center justify-center font-extrabold text-3xl bg-gradient-to-tr from-[#00d4ff] to-[#9b59b6];
+  }
+  .service-image img {
+    @apply w-full h-full object-cover aspect-video;
   }
   .stat {
     @apply text-center p-4 bg-[rgba(255,255,255,0.05)] rounded-[15px] backdrop-blur-md;

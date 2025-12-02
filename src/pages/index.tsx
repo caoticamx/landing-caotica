@@ -12,7 +12,14 @@ export default function Home() {
       <Animation />
       <Header />
       <main>
-        <Hero />
+        <Hero
+          title="Transformamos Ideas en Experiencias Digitales"
+          description="Somos una agencia nueva con ideas frescas. Creamos sitios web modernos y aplicaciones que reflejan la esencia de tu marca a precios competitivos. Nuestra agencia es nueva, nuestros expertos no."
+          buttonPrimary="Comenzar Proyecto"
+          buttonSecondary="Ver Portafolio"
+          hrefPrimary="#contacto"
+          hrefSecondary="/portafolio"
+        />
         <Services />
         <About />
         <Contact />

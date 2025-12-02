@@ -14,7 +14,9 @@ export default function Header() {
         <div
           className={`${inter.className} text-[1.8rem] font-extrabold text-white`}
         >
-          Caótica
+          <Link className="item-menu" href="/">
+            Caótica
+          </Link>
         </div>
         <ul className="list-none gap-6 hidden sm:flex">
           <li>
