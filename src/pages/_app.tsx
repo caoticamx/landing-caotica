@@ -1,20 +1,20 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Orbitron } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
   subsets: ["latin"],
+  variable: "--font-montserrat",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const orbitron = Orbitron({
   subsets: ["latin"],
+  variable: "--font-orbitron",
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${geistSans.className} ${geistMono.className} font-sans`}>
+    <div className={`${montserrat.variable} ${orbitron.variable} font-sans`}>
       <Component {...pageProps} />
     </div>
   );
